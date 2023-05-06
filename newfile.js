@@ -1,26 +1,130 @@
-// This code declares an arrow function named "number"
-// let number = () => {
-//         return 10;
+// //implicit bindingv
+// var sakib = {
+//     name: 'Sakib',
+//     age: 35,
+//     printPalyName: function() {
+//         console.log(this.name);
 //     }
+// }
+// sakib.printPalyName();
+
+// document.getElementById('demo').innerHTML = sakib.name + sakib.age;
+// var printPlayerNameFunction = function(obj) {
+//     obj.printPlayerName = function() {
+//         console.log(this.name);
+//     }
+// }
+// var sakib = {
+//     name: 'Sakib',
+//     age: 35
+// };
+// var tamim = {
+//     name: 'tamim',
+//     age: 35
+// };
+
+// let a = printPlayerNameFunction(sakib);
+// let b = printPlayerNameFunction(tamim);
+// document.getElementById('demo').innerHTML = sakib.name + sakib.age + tamim.name + tamim.age;
+
+
+//------------------------------------------------------------
+
+//implicity function
+// var Person = function(name, age) {
+
+//     return {
+//         name: name,
+//         age: age,
+//         printName: function() {
+//             console.log(this.name);
+//         }
+//     }
+// }
+
+// var sakib = Person('Sakib', 35);
+
+
+// document.getElementById('demo').innerHTML = sakib.name;
+
+//-----------------------------------------------var Person = function(name, age) {
+// var Person = function(name, age) {
+//     return {
+//         name: name,
+//         age: age,
+//         printName: function() {
+//             console.log(this.name);
+//         },
+//         father: {
+//             name: 'Mr.X',
+//             printName: function() {
+//                 console.log(Person.name);
+//             }
+//         }
+//     }
+// }
+// var sakib = Person('Sakib', 35);
+// sakib.father.printName();
+
+
+//.......................................................
+
+// var printName = function(v1, v2, v3) {
+//     console.log(`${this.name} is ${v1},${v2},${v3}`)
+// }
+
+// var sakib = {
+//     name: 'Sakib',
+//     age: 35,
+// }
+
+// var v1 = 'a programmer';
+// var v2 = 'a musician';
+// var v3 = 'an athlete';
+
+// var v = [v1, v2, v3]
+
+// console.log(v)
+// printName.call(sakib, v);
+
+// document.getElementById('demo').innerHTML = sakib.name + v;
+//..............................................................
+// var printName = function(v1, v2, v3) {
+//     console.log(`${this.name} is ${v1},${v2},${v3}`)
+// }
+
+// var sakib = {
+//     name: 'Sakib',
+//     age: 35,
+// }
+
+// var v1 = 'a programmer';
+// var v2 = 'a musician';
+// var v3 = 'an athlete';
 
 
 
-// Declare a variable `number` and assign an arrow function to it
-// let number = () => 10;
 
+// var newFunc = printName.bind(sakib, v1, v2, v3);
+// newFunc();
+// document.getElementById('demo').innerHTML = sakib.name + v1 + v2 + v3;
 
-// This code declares an arrow function named "number" that takes a parameter "n" and always returns the integer 10.
-// let number = (n) => 10;
+//..........................................
+// function Persion(name, age) {
+//     this.name = name;
+//     this.age = age;
 
-//it is allowed not to use parameter in  in single parameter
-// let number = n => 10;
+// }
+// var sakib = new Persion('Sakib', 35);
+// document.getElementById('demo').innerHTML = sakib.name;
 
+//.....................................
 
-//when use double parammeter have to use bracket
-// let number = (a, b) => a + b;
-// let a = number(45, 7);
+var printName = function() {
+    console.log(this.name);
+};
 
-
-
-console.log(number());
-document.getElementById('demo').innerHTML = a
+var sakib = {
+    name: 'Sakib',
+};
+printName.call(sakib);
