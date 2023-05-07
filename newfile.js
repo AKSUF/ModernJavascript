@@ -1,12 +1,17 @@
-//ruthy or falsy value
-//if explicitly false,explicitly zero,blan or empty string,undifiend,not null
-//false,0,"",null,undefiend,Nan if not then truthy
-// var myVar = "test"
-var myVar = [];
-// var myVar = ""
-if (myVar) {
-    document.getElementById('demo').innerHTML = "This is true";
-} else {
-    document.getElementById('demo').innerHTML = "This is false";
+//ternary operator
+var age = 20;
+let adult = "Above 18"
+let teege = "This is before 18"
+let boy = "this is boy age"
+let child = "This is child age"
 
-}
+
+var type = (age >= 18) ? adult : (age < 10) ? boy : child;
+
+var a = 6;
+var access = a > 5;
+document.getElementById('remo').innerHTML = access;
+
+
+
+document.getElementById('demo').innerHTML = type;
