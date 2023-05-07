@@ -1,28 +1,12 @@
-// var javascript = {
-//     name: 'Javascript',
-//     libraries: ['React', 'Angular', 'Vue'],
-//     printLibraries: function() {
-//         var self = this;
-//         var output = "";
-//         this.libraries.forEach(function(a) {
-//             output += `${self.name} loves ${a} <br>`;
-//         })
-//         return output;
-//     }
-// }
+//ruthy or falsy value
+//if explicitly false,explicitly zero,blan or empty string,undifiend,not null
+//false,0,"",null,undefiend,Nan if not then truthy
+// var myVar = "test"
+var myVar = [];
+// var myVar = ""
+if (myVar) {
+    document.getElementById('demo').innerHTML = "This is true";
+} else {
+    document.getElementById('demo').innerHTML = "This is false";
 
-// document.getElementById('demo').innerHTML = javascript.printLibraries();
-
-//now we do this task with arrow function
-
-var javascript = {
-    name: 'Javascript',
-    libraries: ['React', 'Angular', 'Vue'],
-    printLibraries: function() {
-        var output = "";
-        this.libraries.forEach((a) => { output += `${this.name} loves ${a}\n` });
-        return output;
-    }
 }
-console.log(javascript.printLibraries());
-document.getElementById('demo').innerHTML = javascript.printLibraries();
